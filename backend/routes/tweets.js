@@ -1,18 +1,16 @@
 const express = require('express')
-// const Post = require('../models/Posts')
+const tweet = require('../models/Tweets')
 
 const router = express.Router();
 
-// router.get('/', async (req, res) => {
-//     console.log(res)
-//     res.send('POSTED')
-//     try {
-//         const posts = await Post.find()
-//         res.json(posts)
-//     } catch (error) {
-//         res.json({ message: error })
-//     }
-// })
+router.get('/', (req, res) => {
+    // console.log(res)
+    // res.send(res)
+    tweet.find({})
+        .limit(10)
+        .then(list => res.json(list))
+
+})
 
 // router.post('/', (req, res) => {
 //     const post = new Post({

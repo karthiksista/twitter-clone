@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react'
 
+const font = "'Acme', sans-serif";
+
 const themes = {
   dark: {
     backgroundColor: 'black',
-    color: 'white'
+    color: 'white',
+    fontFamily: font,
+
   },
   light: {
     backgroundColor: 'white',
-    color: 'black'
+    color: 'black',
+    fontFamily: font,
+
   }
 }
 
