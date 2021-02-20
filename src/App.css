@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.nav-section {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  width: 30%;
+}
+
+.main-section {
+  display: flex;
+  border: 5px solid slateblue;
+  flex-direction: column;
+  width: 70%;
+  padding: 20px;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+.home-text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 20px;
+}
+.logo-style {
+  display: flex;
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* margin-right: 7px; */
+  padding-left: 177px;
+}
+.twit-logo {
+  margin-bottom: 20px;
+}
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
