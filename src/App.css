@@ -43,7 +43,7 @@ body {
   display: flex;
   justify-content: center;
   margin-left: 80px;
-  margin-bottom: 20px;
+  margin-bottom: 45px;
   margin-right: 15px;
 }
 .home-text {
@@ -57,7 +57,21 @@ body {
 .logo-style {
   display: flex;
 }
-
+.card-head-container {
+  display: flex;
+  /* justify-content: ; */
+}
+.user-name {
+  display: flex;
+  align-items: center;
+  padding-right: 3px;
+}
+.user-name-handle {
+  display: flex;
+  align-items: center;
+  padding-right: 3px;
+  cursor: pointer;
+}
 .nav-container {
   display: flex;
   flex-direction: column;
@@ -82,7 +96,6 @@ body {
 }
 
 .sticky-home {
-  border: 1px solid rgb(104, 25, 25);
   position: fixed;
   z-index: 100;
   width: 31.2%;
@@ -94,14 +107,53 @@ body {
   font-size: larger;
 }
 .tweet-container {
-  border-right: 1px solid rgb(128, 255, 0);
+  border-right: 1px solid rgb(241, 241, 241);
   width: 46%;
 }
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tweet-card {
+  display: flex;
+  width: 100%;
+  /* margin-bottom: 10px; */
+}
+.card-foot {
+  display: flex;
+}
+
+.tweets-list {
+  margin-top: 12%;
+  margin-bottom: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tweet-text-wrap {
+  display: flex;
+}
+.tweet-actions-container {
+  display: flex;
+  justify-content: space-around;
+}
+.tweet-actions {
+  display: flex;
+}
+.MuiCardHeader-avatar {
+  flex: 0 0 auto;
+  margin-right: 0px !important;
+}
+.love:hover {
+  fill: red !important;
+}
+
+.comment:hover {
+  fill: red !important;
+}
+.retweet:hover {
+  fill: red !important;
+}
+
+.upload:hover {
+  fill: red !important;
 }
