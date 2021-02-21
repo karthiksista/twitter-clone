@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import twitter from '../Icons/twitter.svg'
-import homeLight from '../Icons/home-light.svg'
-import homeDark from '../Icons/home-dark.svg'
+import home from '../Icons/home.svg'
+// import homeDark from '../Icons/home-dark.svg'
 import hashtag from '../Icons/hash.svg'
 import moon from '../Icons/moon.svg'
 import sun from '../Icons/sun.svg'
-import UserDark from '../Icons/user-dark-theme.svg'
-import UserWhite from '../Icons/user-white-theme.svg'
+import user from '../Icons/user.svg'
+// import UserWhite from '../Icons/user-white-theme.svg'
 import Button from '@material-ui/core/Button';
 
 function SideNav({ dark, toggle }) {
@@ -38,7 +38,7 @@ function SideNav({ dark, toggle }) {
                 </div>
                 <div className='home' style={hoverStylesHome} onMouseEnter={() => setHomeColor('rgb(29, 161, 242)')} onMouseLeave={() => setHomeColor('')} >
                     <div className='logo-style'>
-                        <img src={!dark ? homeDark : homeLight} alt="home-logo" />
+                        <img style={{ height: '30px', weight: '30px' }} src={!dark ? home : home} alt="home-logo" />
                     </div>
                     <div className='home-text'>
                         <span > Home </span>
@@ -46,7 +46,7 @@ function SideNav({ dark, toggle }) {
                 </div>
                 <div style={hoverStylesExplore} className='home' onMouseEnter={() => setExploreColor('rgb(29, 161, 242)')} onMouseLeave={() => setExploreColor('')}>
                     <div className='logo-style'>
-                        <img src={!dark ? hashtag : hashtag} alt="home-logo" />
+                        <img style={{ height: '28px', weight: '28px' }} src={!dark ? hashtag : hashtag} alt="home-logo" />
                     </div>
                     <div className='home-text'>
                         <span> Explore </span>
@@ -54,7 +54,7 @@ function SideNav({ dark, toggle }) {
                 </div>
                 <div style={hoverStylesProfile} className='home' onMouseEnter={() => setProfileColor('rgb(29, 161, 242)')} onMouseLeave={() => setProfileColor('')}>
                     <div className='logo-style'>
-                        <img src={!dark ? UserWhite : UserDark} alt="home-logo" />
+                        <img style={{ height: '30px', width: '30px' }} src={!dark ? user : user} alt="home-logo" />
                     </div>
                     <div className='home-text'>
                         <span> Profile </span>
