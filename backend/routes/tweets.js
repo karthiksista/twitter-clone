@@ -18,8 +18,6 @@ router.get('/', (req, res) => {
 })
 
 router.get('/getHash', (req, res) => {
-    // console.log(res)
-    // res.send(res)
     let hashes = []
     tweet.find({}, { entities: 1 })
         .limit(100)
