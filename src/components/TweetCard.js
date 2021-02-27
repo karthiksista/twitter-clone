@@ -1,20 +1,16 @@
-import { Card } from '@material-ui/core'
 import React, { useState } from 'react'
-import { makeStyles } from "@material-ui/core/styles";
-import { ThemeContext } from './Theme'
-import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
 import { blue, grey, red } from '@material-ui/core/colors';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+
+import Avatar from '@material-ui/core/Avatar';
+import { Card } from '@material-ui/core'
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import { ThemeContext } from './Theme'
 import comment from '../Icons/comment_black.svg'
 import love from '../Icons/love-black.svg'
+import { makeStyles } from "@material-ui/core/styles";
 import retweet from '../Icons/retweet.svg'
 import upload from '../Icons/Upload_black.svg'
-
-
-
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -45,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 // {dark ? classes.darkThemeColor : classes.whiteThemeColor}
 
-const TweetCard = ({ tweets }) => {
+const TweetCard = ({ hashTag, tweets }) => {
     const { theme, toggle, dark } = React.useContext(ThemeContext)
     const [loveColor, setLoveColor] = useState('')
     const hoverStylesLove = {
@@ -54,6 +50,15 @@ const TweetCard = ({ tweets }) => {
     }
     const classes = useStyles()
     console.log(tweets)
+    let obj = {}
+    hashTag.map(ele => {
+        if (obj[ele]) {
+            obj[ele]++
+        } else {
+            obj[ele] = 1
+        }
+    })
+    console.log(obj)
     return (
         <>
             {tweets.map((tweet) => {
